@@ -238,8 +238,8 @@ body {
   max-height: 100vh;
   height: 100vh;
   width: 100vw;
-  background: url("../images/bg-desktop.png") no-repeat center center;
-  background-size: contain;
+  background: #0c122c url("../images/bg-desktop.png") no-repeat bottom left;
+  background-size: 125% 50%;
 }
 
 main {
