@@ -1,4 +1,5 @@
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,8 +7,18 @@ body {
     max-height: 100vh;
     height: 100vh;
     width: 100vw;
-    background: hsl(229, 57%, 11%) url('../images/bg-desktop.png') no-repeat bottom left;
-    background-size: 125% 50%;
+    background: hsl(229, 57%, 11%);
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('../images/bg-desktop.png') no-repeat;
+    background-size: cover;
+    min-height: 50%;
 }
 
 main {
