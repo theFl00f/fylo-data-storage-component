@@ -226,6 +226,10 @@ html {
   font-family: "Raleway", sans-serif;
 }
 
+img {
+  width: 100%;
+}
+
 body {
   color: #dddbff;
   font-size: 1.2rem;
@@ -274,13 +278,46 @@ main {
   z-index: 1;
 }
 
+.wrapper {
+  max-width: 1440px;
+  width: 63%;
+  margin: 0 auto;
+}
+
+nav, article {
+  background-color: #1d2c67;
+  margin: 0 1.5%;
+  border-radius: .75rem;
+}
+
+nav {
+  min-height: 15.7rem;
+  -ms-flex-preferred-size: 39.25%;
+      flex-basis: 39.25%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-top-right-radius: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 4% 4.5%;
+}
+
+nav .imgContainer {
+  width: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 nav li {
@@ -296,6 +333,15 @@ nav li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 2.5%;
+}
+
+nav li:nth-of-type(1) {
+  margin-left: unset;
+}
+
+nav li :nth-of-type(3) {
+  margin-right: unset;
 }
 
 nav li img {
@@ -303,11 +349,19 @@ nav li img {
   max-width: 50%;
 }
 
+article {
+  -ms-flex-preferred-size: 60.5%;
+      flex-basis: 60.5%;
+  margin-right: unset;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
   -ms-flex-preferred-size: 2%;
       flex-basis: 2%;
+  position: relative;
+  z-index: 1;
 }
 
 .attribution a {

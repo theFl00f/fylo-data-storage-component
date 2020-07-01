@@ -3,6 +3,10 @@ html {
     font-family: $raleway;
 }
 
+img {
+    width: 100%;
+}
+
 body {
     color: $accent1;
     font-size: 1.2rem;
@@ -36,10 +40,37 @@ main {
     z-index: 1;
 }
 
+.wrapper {
+    max-width: 1440px;
+    width: 63%;
+    margin: 0 auto;
+}
+
+nav, article {
+    background-color: $mainCol2;
+    margin: 0 1.5%;
+    border-radius: .75rem;
+}
+
 nav {
+    min-height: 15.7rem; 
+    flex-basis: 39.25%;
+    flex-grow: 1;
+    border-top-right-radius: 8rem;
+    display: flex;
+    flex-direction: column;
+    padding: 4% 4.5%;
+    .imgContainer {
+        width: 50%;
+        object-fit: contain;
+    }
+
+    // ul, .imgContainer {
+    //     padding: 5%;
+    // }
+
     ul {
         display: flex;
-        justify-content: space-between;
     }
     li {
         background-color: $mainCol;
@@ -48,6 +79,13 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 0 2.5%;
+        &:nth-of-type(1) {
+            margin-left: unset;
+        }
+        :nth-of-type(3) {
+            margin-right: unset;
+        }
         img {
             max-height: 50%;
             max-width: 50%;
@@ -55,13 +93,20 @@ nav {
     }
 }
 
+article {
+    flex-basis: 60.5%;
+    margin-right: unset;
+}
+
 
 .attribution { 
     font-size: 11px; 
     text-align: center; 
     flex-basis: 2%;
+    position: relative;
+    z-index: 1;
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: $linkCol; 
 }
