@@ -232,7 +232,7 @@ img {
 
 body {
   color: #dddbff;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,6 +288,7 @@ nav, article {
   background-color: #1d2c67;
   margin: 0 1.5%;
   border-radius: .75rem;
+  padding: 4.1% 4.5%;
 }
 
 nav {
@@ -305,7 +306,6 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 4.1% 4.5%;
 }
 
 nav .imgContainer {
@@ -369,6 +369,40 @@ article {
   -ms-flex-preferred-size: 60.5%;
       flex-basis: 60.5%;
   margin-right: unset;
+  min-height: 12rem;
+  margin-top: 3.7rem;
+  position: relative;
+}
+
+.remainingSpace {
+  font-size: .95rem;
+  position: absolute;
+  top: -30%;
+  right: 7.5%;
+  background-color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #848794;
+  padding: 3% 4%;
+  white-space: nowrap;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.remainingSpace span {
+  color: #0c122c;
+  font-size: 3rem;
+  padding-right: 10%;
 }
 
 .attribution {

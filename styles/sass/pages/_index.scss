@@ -9,7 +9,7 @@ img {
 
 body {
     color: $accent1;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -50,6 +50,7 @@ nav, article {
     background-color: $mainCol2;
     margin: 0 1.5%;
     border-radius: .75rem;
+    padding: 4.1% 4.5%;
 }
 
 nav {
@@ -59,7 +60,6 @@ nav {
     border-top-right-radius: 8rem;
     display: flex;
     flex-direction: column;
-    padding: 4.1% 4.5%;
     .imgContainer {
         width: 50%;
         object-fit: contain;
@@ -99,6 +99,33 @@ nav {
 article {
     flex-basis: 60.5%;
     margin-right: unset;
+    min-height: 12rem;
+    margin-top: 3.7rem;
+    position: relative;
+}
+
+//still needs a fix for the padding, it's not sitting inline like it should
+
+.remainingSpace {
+    font-size: .95rem;
+    position: absolute;
+    top: -30%;
+    right: 7.5%;
+    background-color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $accent2;
+    padding: 3% 4%;
+    white-space: nowrap;
+    min-width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+        color: $mainCol;
+        font-size: 3rem;
+        padding-right: 10%;
+    }
 }
 
 
