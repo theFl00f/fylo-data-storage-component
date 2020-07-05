@@ -444,6 +444,67 @@ article {
   border-color: transparent white transparent transparent;
 }
 
+p.remainingStorage {
+  color: rgba(221, 219, 255, 0.75);
+}
+
+p.remainingStorage span {
+  color: rgba(221, 219, 255, 0.85);
+  font-weight: 700;
+}
+
+.remainingBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.remainingBar p {
+  font-size: .9rem;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.bar {
+  width: 100%;
+  height: 1.55rem;
+  background-color: rgba(12, 18, 44, 0.5);
+  border-radius: 4rem;
+  margin-top: 4%;
+  margin-bottom: 2%;
+  position: relative;
+}
+
+.bar::before {
+  content: '';
+  position: absolute;
+  top: .25rem;
+  bottom: .25rem;
+  left: .25rem;
+  right: 25%;
+  background: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
+  background: linear-gradient(0.25turn, #ffa399, #ff4d97);
+  border-radius: 4rem;
+}
+
+.bar::after {
+  content: '';
+  position: absolute;
+  top: .4rem;
+  bottom: .4rem;
+  right: 25.5%;
+  width: .75rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -451,6 +512,9 @@ article {
       flex-basis: 2%;
   position: relative;
   z-index: 1;
+  background-color: #0c122c;
+  width: 100%;
+  padding: 1% 0;
 }
 
 .attribution a {

@@ -158,6 +158,55 @@ article {
     }
 }
 
+p.remainingStorage {
+    color: rgba(221, 219, 255, 0.75);
+    span {
+        color: rgba(221, 219, 255, 0.85);
+        font-weight: 700;
+    }
+}
+
+.remainingBar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    p {
+        font-size: .9rem;
+        font-weight: 700;
+        opacity: 0.8;
+    }
+}
+
+.bar {
+    width: 100%;
+    height: 1.55rem;
+    background-color: rgba(12, 18, 44, .5);
+    border-radius: 4rem;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: .25rem;
+        bottom: .25rem;
+        left: .25rem;
+        right: 25%;
+        background: linear-gradient(0.25turn, $gradient1, $gradient2);
+        border-radius: 4rem;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: .4rem;
+        bottom: .4rem;
+        right: 25.5%;
+        width: .75rem;
+        background-color: white;
+        border-radius: 50%;
+    }
+}
+
 
 .attribution { 
     font-size: 11px; 
@@ -165,6 +214,9 @@ article {
     flex-basis: 2%;
     position: relative;
     z-index: 1;
+    background-color: $mainCol;
+    width: 100%;
+    padding: 1% 0;
 }
 
 .attribution a { 
