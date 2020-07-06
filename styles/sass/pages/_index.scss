@@ -19,6 +19,9 @@ body {
     height: 100vh;
     width: 100vw;
     background: hsl(229, 57%, 11%);
+    @include break(med) {
+        padding-top: 34%;
+    }
 }
 
 body::after {
@@ -30,6 +33,11 @@ body::after {
     background: url('../images/bg-desktop.png') no-repeat;
     background-size: cover;
     min-height: 52.5%;
+    @include break(med) {
+        min-height: 100%;
+        background: url('../images/bg-mobile.png') no-repeat;
+        background-size: contain;
+    }
 }
 
 main {
@@ -38,6 +46,10 @@ main {
     align-items: center;
     position: relative;
     z-index: 1;
+    @include break(med) {
+        flex-direction: column;
+        max-height: 70%;
+    }
 }
 
 .wrapper {
@@ -46,6 +58,9 @@ main {
     margin: 0 auto;
     @include break(lrg) {
         width: 80%;
+    }
+    @include break(med) {
+        width: 87.5%;
     }
 }
 
@@ -56,6 +71,9 @@ nav, article {
     padding: 4.1% 4.5%;
     position: relative;
     z-index: auto;
+    @include break(med) {
+        width: 100%;
+    }
     &::before {
         content: '';
         box-shadow: 0rem 5rem 5rem 1rem rgba(12, 18, 44, .4);
@@ -223,6 +241,10 @@ p.remainingStorage {
     background-color: $mainCol;
     width: 100%;
     padding: 1% 0;
+    @include break(med) {
+        position: absolute;
+        bottom: 0;
+    }
 }
 
 .attribution a { 
