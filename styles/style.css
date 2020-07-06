@@ -257,7 +257,7 @@ body::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 2.1rem;
+  left: .5rem;
   right: 0;
   background: url("../images/bg-desktop.png") no-repeat;
   background-size: cover;
@@ -284,6 +284,12 @@ main {
   margin: 0 auto;
 }
 
+@media (max-width: 940px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+
 nav, article {
   background-color: #1d2c67;
   margin: 0 1.5%;
@@ -307,6 +313,7 @@ nav::before, article::before {
 
 nav {
   min-height: 15.7rem;
+  min-width: 22.5rem;
   -ms-flex-preferred-size: 39.25%;
       flex-basis: 39.25%;
   -webkit-box-flex: 1;
@@ -385,6 +392,8 @@ article {
   margin-right: unset;
   min-height: 12rem;
   margin-top: 3.7rem;
+  padding: 4.2% 4.4%;
+  min-width: 35rem;
 }
 
 .remainingSpace {
@@ -477,8 +486,8 @@ p.remainingStorage span {
   height: 1.55rem;
   background-color: rgba(12, 18, 44, 0.5);
   border-radius: 4rem;
-  margin-top: 4%;
-  margin-bottom: 2%;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
   position: relative;
 }
 
