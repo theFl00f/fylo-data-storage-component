@@ -21,6 +21,8 @@ body {
     background: hsl(229, 57%, 11%);
     @include break(med) {
         padding-top: 34%;
+        font-size: 2.05rem;
+        text-align: center;
     }
 }
 
@@ -36,7 +38,8 @@ body::after {
     @include break(med) {
         min-height: 100%;
         background: url('../images/bg-mobile.png') no-repeat;
-        background-size: contain;
+        background-size: cover;
+        left: 0;
     }
 }
 
@@ -73,6 +76,8 @@ nav, article {
     z-index: auto;
     @include break(med) {
         width: 100%;
+        padding: 12.25% 13%;
+        border-radius: 1.5rem;
     }
     &::before {
         content: '';
@@ -83,6 +88,10 @@ nav, article {
         width: 100%;
         bottom: 0;
         right: 0;
+        @include break(med) {
+            border-radius: 1.5rem;
+            box-shadow: 0rem 5rem 5rem 1rem rgba(12, 18, 44, .4);
+        }
     }
 }
 
@@ -94,14 +103,24 @@ nav {
     border-top-right-radius: 8rem;
     display: flex;
     flex-direction: column;
+    @include break(med) {
+        flex-basis: 55.5%;
+        border-top-right-radius: 14.5rem;
+    }
     .imgContainer {
         width: 50%;
         object-fit: contain;
+        @include break(med) {
+            width: 56%;
+        }
     }
 
     ul {
         display: flex;
         padding-top: 12.5%;
+        @include break(med) {
+            padding-top: 13.5%;
+        }
     }
     li {
         background-color: $mainCol;
@@ -112,9 +131,18 @@ nav {
         align-items: center;
         margin: 0 3%;
         border-radius: 0.75rem;
+        @include break(med) {
+            height: 7rem;
+            width: 7rem;
+            margin: 0 3.3%;
+            border-radius: 1.5rem;
+        }
         &:nth-of-type(1) {
             margin-left: unset;
             padding: 1.5%;
+            @include break(med) {
+                padding: 1.75%;
+            }
         }
         :nth-of-type(3) {
             margin-right: unset;
@@ -137,6 +165,12 @@ article {
     margin-top: 3.7rem;
     padding: 4.2% 4.4%;
     min-width: 35rem;
+    @include break(med) {
+        flex-basis: 44.5%;
+        margin: 0;
+        margin-top: 2.35rem;
+        padding: 10% 10%;
+    }
 }
 
 .remainingSpace {
@@ -152,21 +186,43 @@ article {
     padding: 3% 4.25%;
     width: 13.9rem;
     white-space: nowrap;
-    min-width: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: .75rem;
     border-bottom-right-radius: 0;
+    @include break(med) {
+        top: unset;
+        right: 50%;
+        bottom: -21%;
+        width: 26rem;
+        margin-right: -13rem;
+        padding: 5% 0;
+        font-size: 1.8rem;
+        letter-spacing: .1rem;
+        border-radius: 1.5rem;
+    }
     p {
         display: flex;
         align-items: center;
+        justify-content: center;
         width: 100%;
+        @include break(med) {
+            position: relative;
+            top: .25rem;
+        }
     }
     span {
         color: $mainCol;
         font-size: 3.1rem;
         padding-right: 7%;
+        @include break(med) {
+            font-size: 5.75rem;
+            letter-spacing: 0.05rem;
+            padding-right: 5%;
+            position: relative;
+            top: -.25rem;
+        }
     }
 
     &::after {
@@ -179,6 +235,9 @@ article {
         border-style: solid;
         border-width: 0 1.7rem 1.7rem 0;
         border-color: transparent white transparent transparent;
+        @include break(med) {
+            border: none;
+        }
     }
 }
 
@@ -198,6 +257,9 @@ p.remainingStorage {
         font-size: .9rem;
         font-weight: 700;
         opacity: 0.8;
+        @include break(med) {
+            font-size: 1.8rem;
+        }
     }
 }
 
@@ -209,6 +271,11 @@ p.remainingStorage {
     margin-top: 1.25rem;
     margin-bottom: 0.625rem;
     position: relative;
+    @include break(med) {
+        height: 2.85rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1.55rem;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -218,6 +285,11 @@ p.remainingStorage {
         right: 25%;
         background: linear-gradient(0.25turn, $gradient1, $gradient2);
         border-radius: 4rem;
+        @include break(med) {
+            top: .4rem;
+            bottom: .4rem;
+            left: .4rem;
+        }
     }
     &::after {
         content: '';
@@ -228,12 +300,18 @@ p.remainingStorage {
         width: .75rem;
         background-color: white;
         border-radius: 50%;
+        @include break(med) {
+            top: .65rem;
+            bottom: .65rem;
+            right: 25.75%;
+            width: 1.5rem;
+        }
     }
 }
 
 
 .attribution { 
-    font-size: 11px; 
+    font-size: 1.1rem; 
     text-align: center; 
     flex-basis: 2%;
     position: relative;
@@ -244,6 +322,8 @@ p.remainingStorage {
     @include break(med) {
         position: absolute;
         bottom: 0;
+        padding: 3.5% 0;
+        font-size: 1.6rem;
     }
 }
 
