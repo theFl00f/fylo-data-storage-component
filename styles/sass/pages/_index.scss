@@ -106,6 +106,7 @@ nav {
     @include break(med) {
         flex-basis: 55.5%;
         border-top-right-radius: 14.5rem;
+        min-height: 25rem;
     }
     .imgContainer {
         width: 50%;
@@ -132,19 +133,26 @@ nav {
         margin: 0 3%;
         border-radius: 0.75rem;
         @include break(med) {
-            height: 7rem;
-            width: 7rem;
             margin: 0 3.3%;
             border-radius: 1.5rem;
+            width: 20%;
+            padding-bottom: 20%;
+            height: 0;
+            position: relative;
+
         }
         &:nth-of-type(1) {
             margin-left: unset;
             padding: 1.5%;
             @include break(med) {
-                padding: 1.75%;
+                padding: 0;
+                padding-bottom: 20%;
+                .imgContainer {
+                    padding: 5%;
+                }
             }
         }
-        :nth-of-type(3) {
+        &:nth-of-type(3) {
             margin-right: unset;
         }
         .imgContainer {
@@ -154,6 +162,14 @@ nav {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            @include break(med) {
+                height: 50%;
+                width: 50%;
+                position: absolute;
+                top: 50%;
+                margin-top: -25%;
+
+            }
         }
     }
 }
@@ -259,6 +275,7 @@ p.remainingStorage {
         opacity: 0.8;
         @include break(med) {
             font-size: 1.8rem;
+            //change to percent
         }
     }
 }
@@ -275,6 +292,7 @@ p.remainingStorage {
         height: 2.85rem;
         margin-top: 2.5rem;
         margin-bottom: 1.55rem;
+        //change to percent
     }
     &::before {
         content: '';
@@ -289,6 +307,7 @@ p.remainingStorage {
             top: .4rem;
             bottom: .4rem;
             left: .4rem;
+            //change to percent
         }
     }
     &::after {
@@ -305,6 +324,7 @@ p.remainingStorage {
             bottom: .65rem;
             right: 25.75%;
             width: 1.5rem;
+            //change to percent
         }
     }
 }
